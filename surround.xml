@@ -1,35 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<templateSet group="jQuery">
-  <template name="fn" value="/**&#10; * $DESCRIPTION$&#10; */&#10;(function ($, undefined) {&#10;&#10;&#9;var $CLASS$ = function (el$CLASS_ARGS$) {&#10;&#9;    $CONSTRUCTOR$&#10;&#9;};&#10;&#9;$CLASS$.prototype.$METHOD$ = function ($ARGS$) {&#10;&#9;&#9;$END$&#10;&#9;};&#10;&#10;&#9;/**&#10;&#9; * Register as jquery plugin&#10;&#9; */&#10;&#9;$.fn.$CLASS_CALL$ = function () {&#10;&#9;&#9;this.each(function () { // iterate and reformat each matched element&#10;&#9;&#9;&#9;var el = $(this);&#10;&#9;&#9;&#9;el.data('$CLASS_CALL$', new $CLASS$(el$CLASS_ARGS$));&#10;&#9;&#9;});&#10;&#9;&#9;return this;&#10;&#9;};&#10;&#10;})(jQuery);" description="jQuery selection module" toReformat="true" toShortenFQNames="true">
-    <variable name="CLASS" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="CLASS_CALL" expression="decapitalize(CLASS)" defaultValue="" alwaysStopAt="false" />
-    <variable name="CLASS_ARGS" expression="" defaultValue=", " alwaysStopAt="true" />
-    <variable name="CONSTRUCTOR" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="DESCRIPTION" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="METHOD" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="ARGS" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="HTML_TEXT" value="false" />
-      <option name="HTML" value="false" />
-      <option name="XSL_TEXT" value="false" />
-      <option name="XML" value="false" />
-      <option name="LUA" value="false" />
-      <option name="CSS_PROPERTY_VALUE" value="false" />
-      <option name="CSS_DECLARATION_BLOCK" value="false" />
-      <option name="CSS_RULESET_LIST" value="false" />
-      <option name="CSS" value="false" />
-      <option name="JAVA_SCRIPT" value="true" />
-      <option name="TypeScript" value="false" />
-      <option name="DART" value="false" />
-      <option name="CUCUMBER_FEATURE_FILE" value="false" />
-      <option name="CoffeeScript" value="false" />
-      <option name="HAML" value="false" />
-      <option name="PHP" value="false" />
-      <option name="JADE" value="false" />
-      <option name="OTHER" value="false" />
-    </context>
-  </template>
-  <template name="proxy" value="$.proxy($SELECTION$, this)" description="Proxy call" toReformat="false" toShortenFQNames="true">
+<templateSet group="surround">
+  <template name="B" value="{$SELECTION$}" description="Surround with {}" toReformat="true" toShortenFQNames="true">
     <variable name="SELECTION" expression="" defaultValue="" alwaysStopAt="false" />
     <context>
       <option name="HTML_TEXT" value="false" />
@@ -41,9 +12,31 @@
       <option name="CSS_DECLARATION_BLOCK" value="false" />
       <option name="CSS_RULESET_LIST" value="false" />
       <option name="CSS" value="false" />
-      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JAVA_SCRIPT" value="false" />
       <option name="TypeScript" value="false" />
-      <option name="DART" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="HAML" value="false" />
+      <option name="PHP" value="false" />
+      <option name="JADE" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="I" value="for ($VAR$ in $SELECTION$) {&#10;  $END$&#10;}" description="Iterate (for..in)" toReformat="true" toShortenFQNames="true">
+    <variable name="SELECTION" expression="" defaultValue="" alwaysStopAt="false" />
+    <variable name="VAR" expression="dartSuggestVariableName()" defaultValue="&quot;o&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="LUA" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
       <option name="CUCUMBER_FEATURE_FILE" value="false" />
       <option name="CoffeeScript" value="false" />
       <option name="HAML" value="false" />

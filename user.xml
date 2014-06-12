@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="user">
+  <template name="scrjs" value=" &lt;script type=&quot;text/javascript&quot; src=&quot;$PATH$&quot;&gt;&lt;/script&gt;" description="script tag javascript" toReformat="false" toShortenFQNames="true">
+    <variable name="PATH" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="LUA" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="true" />
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+      <option name="CSS_RULESET_LIST" value="true" />
+      <option name="CSS" value="true" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="TypeScript" value="true" />
+      <option name="DART" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="true" />
+      <option name="HAML" value="true" />
+      <option name="PHP" value="true" />
+      <option name="JADE" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+</templateSet>
+

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<templateSet group="PHPUnit">
-  <template name="test" value="/***/&#10;public function test$NAME$()&#10;{&#10;    $this-&gt;fail();$END$&#10;}" description="test function" toReformat="true" toShortenFQNames="true">
-    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+<templateSet group="CoffeeScript">
+  <template name="log" value="console.log $COURSOR$" description="console.log" toReformat="true" toShortenFQNames="true">
+    <variable name="COURSOR" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="HTML_TEXT" value="false" />
       <option name="HTML" value="false" />
@@ -16,9 +16,9 @@
       <option name="TypeScript" value="false" />
       <option name="DART" value="false" />
       <option name="CUCUMBER_FEATURE_FILE" value="false" />
-      <option name="CoffeeScript" value="false" />
+      <option name="CoffeeScript" value="true" />
       <option name="HAML" value="false" />
-      <option name="PHP" value="true" />
+      <option name="PHP" value="false" />
       <option name="JADE" value="false" />
       <option name="OTHER" value="false" />
     </context>
